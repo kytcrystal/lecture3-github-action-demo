@@ -2,7 +2,9 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  hello:
+  compile:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello"
+      - run: javac HelloWorld.java
+      - run: echo "Compiled"
+
